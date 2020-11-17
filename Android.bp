@@ -23,6 +23,14 @@ android_app_import {
 	dex_preopt: {
 		enabled: false,
 	},
+	privileged: true,
+    required: [
+        "com.motorola.dolby.dolbyui.features",
+        "hiddenapi-whitelist-com.motorola.dolby.dolbyui",
+        "media_codecs_dolby_audio",
+        "libstagefrightdolby",
+    ],
+
 }
 
 android_app_import {
@@ -34,6 +42,11 @@ android_app_import {
 		enabled: false,
 	},
 	privileged: true,
+	privileged: true,
+    required: [
+        "com.dolby.daxservice",
+        "dax-default",
+    ],
 }
 
 prebuilt_etc {
