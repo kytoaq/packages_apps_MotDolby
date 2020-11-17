@@ -1,5 +1,5 @@
 /**
- * Copyright (C) 2020 Doritos Motorola | Developers
+ * Copyright (C) 2020 Doritos Motorola | Developers ™
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -34,4 +34,31 @@ android_app_import {
 		enabled: false,
 	},
 	privileged: true,
+}
+
+prebuilt_etc {
+    name: "com.dolby.daxservice",
+    owner: "motorola",
+    sub_dir: "permissions",
+    src: "proprietary/etc/permissions/com.dolby.daxservice.xml",
+    filename_from_src: true,
+    product_specific: true,
+}
+
+prebuilt_etc {
+    name: "com.motorola.dolby.dolbyui.features",
+    owner: "motorola",
+    sub_dir: "permissions",
+    src: "proprietary/etc/permissions/com.motorola.dolby.dolbyui.features.xml",
+    filename_from_src: true,
+    product_specific: true,
+}
+
+prebuilt_etc {
+    name: "hiddenapi-whitelist-com.motorola.dolby.dolbyui",
+    owner: "motorola",
+    sub_dir: "sysconfig",
+    src: "proprietary/system/system/etc/sysconfig/hiddenapi-whitelist-com.motorola.dolby.dolbyui.xml",
+    filename_from_src: true,
+    product_specific: true,
 }
