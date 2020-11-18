@@ -85,8 +85,7 @@ cc_prebuilt_binary {
     strip: {
         none: true,
     },
-    src: "proprietary/vendor/bin/hw/vendor.dolby.hardware.dms@1.0-service",
-    filename_from_src: true,
+    srcs: ["proprietary/vendor/bin/hw/vendor.dolby.hardware.dms@1.0-service"],
     required: [
         "vendor.dolby.hardware.dms@1.0-service_rc",
         "vendor.dolby.hardware.dms@1.0",
