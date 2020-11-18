@@ -85,7 +85,7 @@ cc_prebuilt_binary {
     strip: {
         none: true,
     },
-    srcs: "proprietary/vendor/bin/hw/vendor.dolby.hardware.dms@1.0-service",
+    src: "proprietary/vendor/bin/hw/vendor.dolby.hardware.dms@1.0-service",
     filename_from_src: true,
     required: [
         "vendor.dolby.hardware.dms@1.0-service_rc",
@@ -176,22 +176,6 @@ cc_prebuilt_library_shared {
     target: {
 	    android_arm64: {
     	    	srcs: ["proprietary/vendor/lib64/vendor.dolby.hardware.dms@1.0-impl.so"],
-	    },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libdlbdsservice",
-    owner: "motorola",
-    strip: {
-        none: true,
-    },
-    target: {
-	    android_arm64: {
-    	    	srcs: ["proprietary/vendor/lib64/libdlbdsservice.so"],
 	    },
     },
     compile_multilib: "both",
