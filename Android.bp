@@ -31,7 +31,7 @@ android_app_import {
         "media_codecs_dolby_audio",
         "libstagefrightdolby",
     ],
-    overrides: ["MusicFX", "AudioFX"],
+    overrides: ["MusicFX", "AudioFX", "TimberX"],
 }
 
 android_app_import {
@@ -87,7 +87,7 @@ cc_prebuilt_binary {
     },
     srcs: ["proprietary/vendor/bin/hw/vendor.dolby.hardware.dms@1.0-service"],
     required: [
-        "vendor.dolby.hardware.dms@1.0-service_rc",
+        "vendor.dolby.hardware.dms@1.0-service.rc",
         "vendor.dolby.hardware.dms@1.0",
         "vendor.dolby.hardware.dms@1.0-impl",
     ],
@@ -104,7 +104,7 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "vendor.dolby.hardware.dms@1.0-service_rc",
+    name: "vendor.dolby.hardware.dms@1.0-service.rc",
     owner: "motorola",
     sub_dir: "init",
     src: "proprietary/vendor/etc/init/vendor.dolby.hardware.dms@1.0-service.rc",
